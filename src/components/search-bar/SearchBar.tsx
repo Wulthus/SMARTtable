@@ -1,5 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { selectQuery, setFilter, setQuery } from "../../store/usersSlice";
+import { isValidFilter } from "../../utils/isValidFIlter";
+import { FilterType } from "../../types/FilterTypes";
 
 export default function SearchBar(){
 
@@ -12,27 +14,12 @@ export default function SearchBar(){
 
     const handleChangeFilter = function(e: React.MouseEvent<HTMLButtonElement>): void{
 
-        //-----------------------------------------------------------------------------------THIS IS UGLY AS HELL, FIX IT
-
         const value = e.currentTarget.value;
-        switch (value) {
-            case "name":
-                dispatch(setFilter(value));
-                break;
-            case "username":
-                dispatch(setFilter(value));
-                break;
-            case "email":
-                dispatch(setFilter(value));
-                break;
-            case "phone":
-                dispatch(setFilter(value));
-                break;
-            case "none":
-                dispatch(setFilter(value));
-                break;
-            default:
-                throw new Error(`SearchBar switch statement did not recognise the following value: ${value}`)
+        
+        if (isValidFilter(value)) {
+            dispatch(setFilter(value as FilterType));
+        } else {
+            throw new Error(`handleChangeFilter function did not recognise the following value as correct filter type: ${value}`)
         }
     }
 
@@ -47,3 +34,4 @@ export default function SearchBar(){
         </div>
     )
 }
+

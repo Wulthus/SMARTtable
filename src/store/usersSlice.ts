@@ -1,7 +1,7 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { UserType } from "../types/UserType";
+import { UserType } from "../types/UserTypes";
 import { RootState } from "./store";
-import { FilterType } from "../types/FilterType";
+import { FilterIndexType, FilterType } from "../types/FilterTypes";
 
 interface InitialStateType {
     data: UserType[],
@@ -39,7 +39,7 @@ export const selectFiltered = (state: RootState) => {
     if (state.users.filter === 'none'){
         return state.users.data
     } else {
-        const filter = state.users.filter as FilterType;
+        const filter = state.users.filter as FilterIndexType;
         return state.users.data.filter(entry => entry[filter].includes(state.users.query))
     }
 

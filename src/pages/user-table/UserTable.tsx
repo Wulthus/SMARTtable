@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectFiltered, setData } from "../../store/usersSlice";
-import { UserType } from "../../types/UserType";
+import { UserType } from "../../types/UserTypes";
 
 import Section from "../../components/section/Section";
 import Table4Cols from "../../components/table/Table4Cols";
