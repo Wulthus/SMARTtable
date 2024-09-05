@@ -3,12 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectFiltered, setData } from "../../store/usersSlice";
 import { UserType } from "../../types/UserTypes";
 
+import { FaAddressCard, FaPhoneAlt, FaUser } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
+
+import TableMessage from "../../components/table-message/TableMessage";
 import Section from "../../components/section/Section";
 import SearchBar from "../../components/search-bar/SearchBar";
 import TableRow from "../../components/table-row/TableRow";
-import { FaAddressCard, FaPhoneAlt, FaUser } from "react-icons/fa";
-import { IoIosMail } from "react-icons/io";
-import TableMessage from "../../components/table-message/TableMessage";
 
 
 
@@ -35,7 +36,7 @@ export default function UserTable(){
         <Section>
             <div className="user-table__table">
                 <div className="user-table__header">
-                    <h1 className="h1">User Table</h1>
+                    <h1 className="user-table__heading">User Table</h1>
                     <SearchBar/>
                 </div>
                 <TableRow 

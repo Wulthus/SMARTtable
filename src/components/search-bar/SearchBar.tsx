@@ -8,7 +8,6 @@ import SearchBarInput from "./search-bar-input/SearchBarInput";
 
 export default function SearchBar(){
 
-
     const dispatch = useDispatch();
     const filter = useSelector(selectFilter);
 

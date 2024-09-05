@@ -1,6 +1,7 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { UserType } from "../types/UserTypes";
 import { RootState } from "./store";
+
 import { FilterIndexType, FilterType } from "../types/FilterTypes";
 
 interface InitialStateType {
@@ -36,6 +37,7 @@ export const { setData, setQuery, setFilter } = usersSlice.actions;
 export const selectData = (state: RootState) => state.users.data;
 export const selectQuery = (state: RootState) => state.users.query;
 export const selectFilter = (state: RootState) => state.users.filter;
+
 export const selectFiltered = (state: RootState) => {
     if (state.users.filter === 'none'){
         return state.users.data

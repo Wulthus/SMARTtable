@@ -1,22 +1,30 @@
 @use '../../stylesheets/variables' as v;
 
-.user-table__table{
-    border: v.$primary-border;
-    border-radius: 20px;
-    padding: 10px 20px;
-    background: v.$grey-gradient;
-}
-
-.user-table__content{
-    border: v.$primary-border;
-    border-radius: 20px;
-    padding: 10px 20px;
-    background-color: v.$color-extra-light;
-}
-
 .user-table__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 15px;
 }
+
+.user-table__heading {
+    letter-spacing: -1px;
+    font-size: v.$font-xl;
+    font-weight: 700;
+}
+
+.user-table__table {
+    border: v.$primary-border;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background: v.$grey-gradient;
+}
+
+.user-table__content {
+    min-height: 200px;
+    border: v.$primary-border;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: v.$color-extra-light;
+}
+

@@ -14,7 +14,13 @@ export default function SearchBarInput({ maxLength, placeholder, handleChange }:
 
     return (
         <div className="search-bar__field">
-            <input value={query} maxLength={maxLength} placeholder={placeholder} onChange={handleChange} className="search-bar__input"/>
+            <input 
+                value={query} 
+                maxLength={maxLength} 
+                placeholder={placeholder} 
+                onChange={handleChange} 
+                className="search-bar__input"
+            />
             <IoSearch />
         </div>
     )

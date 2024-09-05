@@ -1,9 +1,8 @@
 @use 'stylesheets/variables.scss' as v;
-@use 'stylesheets/headings';
 
 @use 'pages/user-table/userTable';
 @use 'components/section/section';
-@use 'components/table-row/row';
+@use 'components/table-row/tableRow';
 @use 'components/table-message/tableMessage';
 @use 'components/search-bar/search-bar.scss';
 @use 'components/search-bar/search-bar-button/searchBarButton';
