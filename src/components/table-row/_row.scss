@@ -1,0 +1,42 @@
+@use '../../stylesheets/variables' as v;
+
+.table__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: v.$primary-border;
+}
+
+
+
+.table__cell {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    width: 25%;
+    transition: all .2s;
+
+    &:hover {
+        background-color: v.$color-primary-background;
+        color: v.$color-extra-light;
+        font-weight: 600;
+    }
+}
+
+.table__head-cell {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    width: 25%;
+    transition: v.$standard-transition;
+    gap: 5px;
+
+    &:hover {
+        color: v.$color-primary-background;
+    }
+}
+
+.table__head {
+    border-bottom: none;
+    font-weight: 600;
+}

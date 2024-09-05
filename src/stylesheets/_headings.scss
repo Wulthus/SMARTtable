@@ -1,0 +1,7 @@
+@use './variables' as v;
+
+.h1 {
+    letter-spacing: -1px;
+    font-size: v.$font-xl;
+    font-weight: 700;
+}

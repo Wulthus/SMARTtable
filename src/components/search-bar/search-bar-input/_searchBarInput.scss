@@ -1,0 +1,31 @@
+@use '../../../stylesheets/variables' as v;
+
+.search-bar__field {
+    background-color: v.$color-extra-light;
+    border: v.$primary-border;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+
+    transition: v.$standard-transition;
+
+    &--active {
+        color: v.$color-extra-light;
+        background-color: v.$color-primary-background;
+    }
+
+}
+
+.search-bar__input {
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+
+    &:focus-visible {
+        border: none;
+    }
+}

@@ -1,0 +1,14 @@
+@use '../../stylesheets/variables' as v;
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+@media screen and (max-width: 1200px){
+    .search-bar{
+        flex-direction: column-reverse;
+        gap: 5px;
+    }
+}
